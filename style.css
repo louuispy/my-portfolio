@@ -1,19 +1,21 @@
+/* Imports and root */
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
 
 :root {
-  --primary-color: #150135;
-  --secondary-color: #2a0368;
+  --primary-color: #0e001b;
+  --secondary-color: #17022b;
   --tertiary-color: #b13bff;
   --quaternary-color: #ebd3f8;
-  --quinary-color: #de3bff;
+  --quinary-color: #671fdb;
   --white: #ffffff;
-  --max-width: 900px;
+  --max-width: 56.25rem;
   --gradient-1: linear-gradient(to right bottom, #f76bd9, #671fdb);
   --gradient-2: linear-gradient(
     to right bottom,
     var(--white) 25%,
     var(--primary-color)
   );
+  --gradient-3: linear-gradient(to top right, #671fdb, #f76bd9);
 }
 
 * {
@@ -22,6 +24,8 @@
   box-sizing: border-box;
 }
 
+/* Body and header general styles */
+
 body {
   font-family: Outfit, sans-serif;
   background-color: var(--primary-color);
@@ -29,12 +33,19 @@ body {
 
 header {
   background-color: var(--secondary-color);
+  border-bottom: 0.125rem solid rgba(255, 255, 255, 0.1);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
 }
+
+/* Nav__bar style */
 
 .nav__bar {
   display: flex;
   justify-content: right;
-  padding: 40px;
+  padding: 2.5rem;
 }
 
 .nav__logo {
@@ -45,7 +56,7 @@ header {
   display: flex;
   list-style: none;
   text-align: center;
-  gap: 25px;
+  gap: 2rem;
   align-items: right;
   justify-content: end;
 }
@@ -60,40 +71,129 @@ header {
   color: var(--white);
 }
 
+/* Main general style */
+
+main {
+  padding-top: 11.25rem;
+}
+
+/* Container__apresentation style */
+
 .container__apresentation {
-  margin-top: 80px;
+  margin-top: 1.88rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
+  margin-bottom: 12.5rem;
+  max-width: 100%;
 }
 
 .container__apresentation > img {
-  width: 25%;
+  width: 28rem;
   border-radius: 100%;
-  margin-bottom: 40px;
+  margin-bottom: 2.5rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.container__apresentation > img:hover {
+  margin-bottom: 5.625rem;
+  scale: 1.05;
+  z-index: 0;
+  box-shadow: 0 0 3.125rem 0.063rem #681274, 0 0 4.375rempx 0.063rem #560361;
 }
 
 .container__apresentation__texts {
   text-decoration: none;
   color: var(--white);
-  max-width: 600px;
 }
 
 .container__apresentation__texts__title {
-  font-size: 50px;
-  margin-bottom: 20px;
+  display: inline-block;
+  font-size: 3.125rem;
+  font-weight: 400;
+  white-space: nowrap;
+  width: 0;
+  text-align: left;
+  border-right: 0.983rem solid var(--white);
+  overflow: hidden;
+  animation: typing 1s linear forwards,
+    blinking 0.5s step-end infinite alternate;
 }
 
 .title__strong {
   background: var(--gradient-1);
-  -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.container__apresentation__texts__paragraph {
-  font-size: 20px;
-  margin-bottom: 20px;
-  color: rgba(255, 255, 255, 0.8);
-  line-height: 1.5;
+.container__apresentation__texts__header {
+  opacity: 0;
+  font-size: 2.188rem;
+  font-weight: 300;
+  background: var(--gradient-3);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: fade 1s ease-out forwards;
+  animation-delay: 1s;
+}
+
+@keyframes typing {
+  from {
+    width: 0ch;
+  }
+  to {
+    width: 18ch;
+  }
+}
+
+@keyframes blinking {
+  50% {
+    border-color: transparent;
+  }
+}
+
+/* Container__about__me style */
+
+.container__about__me {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.container__about__me__title {
+  opacity: 0;
+  font-size: 2.5rem;
+  font-weight: 400;
+  background: var(--gradient-1);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 1.25rem;
+  animation: fade 1s ease-out forwards;
+  animation-delay: 1.5s;
+}
+
+.container__about__me__paragraph {
+  opacity: 0;
+  max-width: 50rem;
+  font-size: 1.25rem;
+  margin-bottom: 1.25rem;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.75);
+  animation: fade 1s ease-out forwards;
+  animation-delay: 2s;
+}
+
+.container__about__me__paragraph > strong {
+  color: var(--white);
+  font-weight: 400;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
