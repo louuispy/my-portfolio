@@ -202,7 +202,6 @@ main {
   font-weight: 400;
 }
 
-
 /* Container__technologies style */
 .container__technologies {
   opacity: 0;
@@ -274,7 +273,6 @@ main {
 }
 
 @media (max-width: 900px) {
-
   .container__apresentation > img {
     width: 14rem;
   }
@@ -344,7 +342,7 @@ main {
   max-width: 45rem;
   display: flex;
   flex-direction: column;
-  margin: 0 auto ;
+  margin: 0 auto;
   padding: 6.25rem 0.9rem;
   animation: fade 1s ease-out forwards;
   animation-delay: 1.8s;
@@ -373,6 +371,12 @@ main {
   border-radius: 0.625rem;
   border-top: 0.001rem solid rgba(255, 255, 255, 0.2);
   margin-bottom: 1.25rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.container__experience__timeline li:hover {
+  box-shadow: 0 0 1.25rem 0.063rem #681274;
+  background-color: #681274;
 }
 
 .container__experience__timeline li:last-child {
@@ -391,7 +395,9 @@ main {
   line-height: 1.8rem;
 }
 
-.container__experience__timeline .container__experience__timeline__content .container__experience__timeline__content__date {
+.container__experience__timeline
+  .container__experience__timeline__content
+  .container__experience__timeline__content__date {
   font-weight: 600;
   margin-bottom: 0.625rem;
 }
@@ -405,18 +411,20 @@ main {
 
   .container__experience__timeline li:nth-child(odd)::before {
     transform: translate(50%, -50%);
-    right: -1.8rem
+    right: -1.8rem;
   }
 
   .container__experience__timeline li:nth-child(even)::before {
     transform: translate(-50%, -50%);
-    left: -1.8rem
+    left: -1.8rem;
   }
 
-  .container__experience__timeline .container__experience__timeline__content .container__experience__timeline__content__date {
+  .container__experience__timeline
+    .container__experience__timeline__content
+    .container__experience__timeline__content__date {
     position: absolute;
     top: -1.8rem;
-    color: var(--white)
+    color: var(--white);
   }
 
   .container__experience__timeline li:nth-child(odd) {
@@ -439,7 +447,7 @@ main {
     height: 1.25rem;
     width: 1.25rem;
     border-radius: 50%;
-    background-color:#681274;
+    background-color: #681274;
     top: 0;
     z-index: 1;
   }
@@ -450,7 +458,7 @@ main {
     height: calc(100% + 2.5rem);
     width: 0.12rem;
     top: 0;
-    background-color:#681274;
+    background-color: #681274;
     right: -1.8rem;
   }
 
