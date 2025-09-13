@@ -7,18 +7,10 @@
   --secondary-color-opacity: rgba(23, 2, 43, 0.7);
   --tertiary-color: #5f1c70;
   --quaternary-color: #ebd3f8;
-  --quinary-color: #671fdb;
   --white: #ffffff;
-  --max-width: 56.25rem;
   --gradient-1: linear-gradient(to right bottom, #f76bd9, #671fdb);
-  --gradient-2: linear-gradient(
-    to right bottom,
-    var(--white) 25%,
-    var(--primary-color)
-  );
-  --gradient-3: linear-gradient(to top right, #671fdb, #f76bd9);
-  --gradient-4: linear-gradient(to top, #17022b, #361344);
-  --gradient-5: linear-gradient(to top right, #17022b, #361344);
+  --2: linear-gradient(to top right, #671fdb, #f76bd9);
+
 }
 
 @keyframes fade {
@@ -30,14 +22,15 @@
   }
 }
 
+::selection {
+    background-color: var(--quaternary-color);
+    color: var(--primary-color);
+  }
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  ::selection {
-    background-color: var(--quaternary-color);
-    color: var(--primary-color);
-  }
 }
 
 /* Body and header general styles */
@@ -150,7 +143,7 @@ main {
   opacity: 0;
   font-size: 2.188rem;
   font-weight: 300;
-  background: var(--gradient-3);
+  background: var(--gradient-2);
   background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: fade 1s ease-out forwards;
@@ -181,9 +174,13 @@ main {
   align-items: center;
   text-align: center;
   margin-bottom: 9rem;
-  animation: fade 1s ease-out forwards;
-  animation-delay: 1.5s;
+  transition: opacity 1s ease-out;
 }
+
+.container__about__me.is-visible {
+  opacity: 1;
+}
+
 .container__about__me__title {
   font-size: 2.5rem;
   font-weight: 400;
@@ -237,8 +234,11 @@ main {
   align-items: center;
   text-align: center;
   margin-bottom: 5rem;
-  animation: fade 1s ease-out forwards;
-  animation-delay: 1.5s;
+  transition: opacity 1s ease-out;
+}
+
+.container__technologies.is-visible {
+  opacity: 1;
 }
 
 .container__technologies__title {
@@ -255,7 +255,7 @@ main {
   grid-template-columns: repeat(4, 1fr);
   gap: 2rem;
   justify-items: center;
-  max-width: var(--max-width);
+  max-width: 56.25rem;
   margin: 0 auto;
 }
 
@@ -351,8 +351,11 @@ main {
   flex-direction: column;
   margin: 0 auto;
   padding: 6.25rem 0.9rem;
-  animation: fade 1s ease-out forwards;
-  animation-delay: 1.5s;
+  transition: opacity 1s ease-out;
+}
+
+.container__experience.is-visible {
+  opacity: 1;
 }
 
 .container__experience__title {
@@ -487,8 +490,11 @@ main {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  animation: fade 1s ease-out forwards;
-  animation-delay: 1.5s;
+  transition: opacity 1s ease-out
+}
+
+.container__projects.is-visible {
+  opacity: 1;
 }
 
 .container__projects__title {
