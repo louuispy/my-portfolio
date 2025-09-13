@@ -68,6 +68,7 @@ header {
   top: 50%;
   transform: translateY(-50%); 
   cursor: pointer;
+  display: none;
 }
 
 .nav__bar__button i {
