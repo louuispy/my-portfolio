@@ -39,3 +39,12 @@ document.querySelectorAll(".nav__links a").forEach((anchor) => {
     });
   });
 });
+
+const toggleButton = document.querySelector(".nav__bar__button");
+const navLinks = document.querySelector(".nav__links");
+const navBar = document.querySelector("header");
+
+toggleButton.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
+  navBar.classList.toggle("active");
+});
