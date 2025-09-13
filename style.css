@@ -94,7 +94,7 @@ header {
   color: var(--white);
 }
 
-@media (max-width: 720px) {
+@media (max-width: 900px) and (max-width: 360px){
   header.active::before {
     transform: scaleY(2);
   }
@@ -275,7 +275,7 @@ main {
   font-weight: 400;
 }
 
-@media (max-width: 720px) {
+@media (max-width: 900px) and (max-width: 360px){
 
   .container__apresentation > img {
     width: 23rem;
@@ -388,7 +388,7 @@ main {
   color: var(--white);
 }
 
-@media (max-width: 720px) {
+@media (max-width: 900px) and (max-width: 360px){
   .container__technologies__title {
     font-size: 2rem;
   }
@@ -500,13 +500,13 @@ main {
   font-weight: 600;
   margin-bottom: 0.625rem;
 }
-@media (max-width: 720px) {
+@media (max-width: 900px) and (max-width: 360px){
   .container__experience__title {
     font-size: 2rem;
   }
 }
 
-@media (min-width: 720px) {
+@media (min-width: 900px) and (max-width: 360px){
   .container__experience__timeline li {
     width: 50%;
     position: relative;
