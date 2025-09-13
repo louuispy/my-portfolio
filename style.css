@@ -525,6 +525,12 @@ main {
   margin-bottom: 1rem;
 }
 
+.container__projects__project__video {
+  width: 50rem;
+  border-radius: 0.875rem;
+  margin-bottom: 1rem;
+}
+
 .container__projects__project__title {
   color: var(--white);
   font-size: 1.8rem;
@@ -598,6 +604,11 @@ main {
   .container__projects__project img {
     width: 100%;
   }
+
+  .container__projects__project__video {
+    width: 100%;
+  }
+
 
   .container__projects__project__technologies {
     gap: 0.75rem; 
