@@ -639,7 +639,7 @@ main {
   .nav__links {
     position: absolute;
     right: 0;
-    width: 40vw;
+    width: 50vw;
     height: 20rem;
     border-radius: 0  0 0 1rem;
     background-color: var(--nav-bar-color);
