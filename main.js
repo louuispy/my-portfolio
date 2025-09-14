@@ -40,11 +40,47 @@ document.querySelectorAll(".nav__links a").forEach((anchor) => {
   });
 });
 
-const toggleButton = document.querySelector(".nav__bar__button");
-const navLinks = document.querySelector(".nav__links");
-const navBar = document.querySelector("header");
+class MobileNavbar {
+  constructor(mobileMenu, navList, navLinks) {
+    this.mobileMenu = document.querySelector(mobileMenu);
+    this.navList = document.querySelector(navList);
+    this.navLinks = document.querySelectorAll(navLinks);
+    this.activeClass = "active";
 
-toggleButton.addEventListener("click", () => {
-  navLinks.classList.toggle("active");
-  navBar.classList.toggle("active");
-});
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  animateLinks() {
+    this.navLinks.forEach((link, index) => {
+      link.style.animation
+        ? (link.style.animation = "")
+        : (link.style.animation = `navLinkFade 0.3s ease forwards ${
+            index / 6 + 0.3
+          }s`)
+    });
+  }
+
+  handleClick() {
+    this.navList.classList.toggle(this.activeClass);
+    this.mobileMenu.classList.toggle(this.activeClass)
+    this.animateLinks();
+  }
+
+  addClickEvent() {
+    this.mobileMenu.addEventListener("click", this.handleClick);
+  }
+
+  init() {
+    if (this.mobileMenu) {
+      this.addClickEvent();
+    }
+    return this;
+  }
+}
+
+const mobileNavBar = new MobileNavbar(
+  ".nav__bar__button",
+  ".nav__links",
+  ".nav__links li"
+);
+mobileNavBar.init()

@@ -1,12 +1,12 @@
-/* Imports, root and fade animation */
+/* Imports, root and animation */
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
 
 :root {
   --primary-color: #0e001b;
   --secondary-color: #290d36;
-  --secondary-color-opacity: rgba(23, 2, 43, 0.7);
   --tertiary-color: #5f1c70;
   --quaternary-color: #ebd3f8;
+  --nav-bar-color: #170128;
   --white: #ffffff;
   --gradient-1: linear-gradient(to right bottom, #f76bd9, #671fdb);
   --gradient-2: linear-gradient(to top right, #671fdb, #f76bd9);
@@ -20,6 +20,55 @@
     opacity: 1;
   }
 }
+
+@keyframes typing {
+  from {
+    width: 0ch;
+  }
+  to {
+    width: 18ch;
+  }
+}
+
+@keyframes blinking {
+  50% {
+    border-color: transparent;
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(3rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-3rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(3rem);
+  }
+  to {
+    opacity: 1;
+    transformX: translateX(0);
+  }
+}
+
 
 ::selection {
   background-color: var(--quaternary-color);
@@ -40,29 +89,24 @@ body {
   background: #20002e;
 }
 
-header {
-  background-color: var(--secondary-color-opacity);
-  backdrop-filter: blur(0.625rem);
-  border-bottom: 0.125rem solid rgba(255, 255, 255, 0.1);
-  position: fixed;
-  top: 0;
-  width: 100%;
-  transition: max-height 0.5 ease-in-out;
-  z-index: 1;
-}
-
 /* Nav__bar style */
 
 .nav__bar {
+  background-color: var(--nav-bar-color);
+  backdrop-filter: blur(0.625rem);
+  border-bottom: 0.125rem solid rgba(255, 255, 255, 0.1);
   display: flex;
-  position: relative;
+  position: fixed; 
+  width: 100%; 
   justify-content: center;
   padding: 2.5rem;
+  top: 0;
+  z-index: 100;
 }
 
 .nav__bar__button {
   color: var(--white);
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   position: absolute;
   right: 2.5rem;
   top: 50%;
@@ -75,13 +119,17 @@ header {
   cursor: pointer;
 }
 
+.ri-close-line {
+  display: none;
+  font-size: 1.5rem;
+}
+
 .nav__links {
+  text-align: center;
   display: flex;
   list-style: none;
   text-align: center;
   gap: 2rem;
-  align-items: right;
-  justify-content: end;
 }
 
 .nav__links > li > a {
@@ -160,43 +208,6 @@ main {
   -webkit-text-fill-color: transparent;
   animation: fade 1s ease-out forwards;
   animation-delay: 0.8s;
-}
-
-@keyframes typing {
-  from {
-    width: 0ch;
-  }
-  to {
-    width: 18ch;
-  }
-}
-
-@keyframes blinking {
-  50% {
-    border-color: transparent;
-  }
-}
-
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(3rem);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes fadeDown {
-  from {
-    opacity: 0;
-    transform: translateY(-3rem);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 
 /* Container__about__me style */
@@ -374,7 +385,7 @@ main {
   line-height: 1.8rem;
 }
 
-.container__experience__timeline
+.container__experience__timeline 
   .container__experience__timeline__content
   .container__experience__timeline__content__date {
   font-weight: 600;
@@ -620,38 +631,58 @@ main {
 
 @media (max-width: 900px) and (min-width: 360px) {
   /* Nav */
-  header.active::before {
-    transform: scaleY(2);
+  body {
+    overflow: hidden;
+    overflow-y: scroll;
   }
+
+  .nav__links {
+    position: absolute;
+    right: 0;
+    width: 40vw;
+    height: 20rem;
+    border-radius: 0  0 0 1rem;
+    background-color: var(--nav-bar-color);
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+  }
+
   .nav__links > li {
     font-size: 1rem;
-  }
-  .nav__bar {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .nav__links {
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    display: none;
+    margin-left: 0;
     opacity: 0;
-    animation: fadeDown 0.3s ease-in-out;
   }
+
   .nav__bar__button {
-    display: flex;
+    display: inline-block;
     right: 2.5rem;
     top: 2.5rem;
   }
+
   .nav__links.active {
+    transform: translateX(0);
     display: flex;
-    transition: all 0.2s ease-in-out;
-    transform: translateY(0);
-    opacity: 1;
-    animation: fadeDown 0.3s ease-in-out;
+    flex-direction: column;
   }
-  /* Apresentação */
+
+  .nav__links.active li {
+    text-align: left;
+    margin-left: 3rem;
+  }
+
+  .nav__bar__button.active .ri-menu-line {
+    display: none;
+    animation: fade .3s ease-out
+  }
+
+  .nav__bar__button.active .ri-close-line {
+    display: inline-block;
+    right: 2.5rem;
+    top: 2.5rem;
+    animation: fade .3s ease-in-out;
+  }
+  
+  /* Apresentation */
   .container__apresentation > img {
     width: 23rem;
     animation: fadeUp 0.5s ease-out forwards;
@@ -685,7 +716,7 @@ main {
   .container__about__me__paragraph {
     font-size: 1.2rem;
   }
-  /* Tecnologias */
+  /* Technologies */
   .container__technologies__title {
     font-size: 2rem;
   }
@@ -708,7 +739,7 @@ main {
   .container__technologies__images__tech span {
     font-size: 1rem;
   }
-  /* Experiência */
+  /* Experiences */
   .container__experience__title {
     font-size: 2rem;
   }
@@ -778,31 +809,13 @@ main {
 }
 
 @media (max-width: 720px) and (min-width: 360px) {
-  header {
-    padding: 1rem;
-  }
-  .nav__bar {
-    padding: 1rem;
-  }
-  .nav__bar__button {
-    right: 1rem;
-    top: 1rem;
-    font-size: 1.2rem;
-  }
-  .nav__links {
-    gap: 1rem;
-    padding: 1rem 0;
-  }
-  .nav__links > li > a {
-    font-size: 1rem;
-  }
   /* Main */
   main {
     padding-top: 8rem;
     padding-left: 1.5rem;
     padding-right: 1.5rem;
   }
-  /* Apresentação */
+  /* Apresentation */
   .container__apresentation {
     margin-top: 1rem;
   }
@@ -832,7 +845,7 @@ main {
     max-width: 90%;
     line-height: 1.6;
   }
-  /* Tecnologias */
+  /* Technologies */
   .container__technologies {
     padding-top: 6rem;
   }
@@ -864,11 +877,11 @@ main {
     font-size: 1rem;
   }
 
-  /* Experiência */
+  /* Experiences */
   .container__experience {
     padding: 4rem 1rem;
     padding-top: 6rem;
-    max-width: 95%;
+    max-width: 100%;
   }
   .container__experience__title {
     font-size: 1.8rem;
@@ -888,7 +901,7 @@ main {
     font-size: 1rem;
     line-height: 1.5rem;
   }
-  /* Projetos */
+  /* Projects */
   .container__projects {
     padding-top: 3rem;
   }
@@ -905,7 +918,7 @@ main {
   .container__projects__project__video {
     width: 100%;
     height: auto;
-    max-height: 200px;
+    max-height: 17rem;
   }
   .container__projects__project__title {
     font-size: 1.4rem;
