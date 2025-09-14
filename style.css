@@ -667,7 +667,7 @@ main {
 
   .nav__links.active li {
     text-align: left;
-    margin-left: 3rem;
+    margin-left: 1.5rem;
   }
 
   .nav__bar__button.active .ri-menu-line {
