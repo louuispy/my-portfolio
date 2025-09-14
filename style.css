@@ -841,26 +841,29 @@ main {
     margin-bottom: 2rem;
   }
   .container__technologies__images {
-    grid-template-columns: repeat(2, 1fr); 
-    gap: 1.2rem;
-    max-width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
   }
+
   .container__technologies__images__tech {
     padding: 1rem;
     max-width: 10rem;
-    height: 4rem;  
   }
+
   .container__technologies__images__tech svg {
-    width: 1.8rem;
-    height: 1.8rem;
+    width: 1.5rem;
+    height: 1.5rem;
   }
+
   .container__technologies__images__tech .tensorflow-svg {
-    width: 3.5rem;
-    height: 3.5rem;
+    width: 4rem;
+    height: 4rem;
   }
+
   .container__technologies__images__tech span {
     font-size: 1rem;
   }
+  
   /* Experiência */
   .container__experience {
     padding: 4rem 1rem;
