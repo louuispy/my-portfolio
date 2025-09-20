@@ -1,4 +1,3 @@
-/* Imports, root and animation */
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
 
 :root {
@@ -69,7 +68,6 @@
   }
 }
 
-
 ::selection {
   background-color: var(--quaternary-color);
   color: var(--primary-color);
@@ -82,14 +80,10 @@
   scrollbar-color: var(--quaternary-color) var(--secondary-color);
 }
 
-/* Body and header general styles */
-
 body {
   font-family: Outfit, sans-serif;
   background: #20002e;
 }
-
-/* Nav__bar style */
 
 .nav__bar {
   background-color: var(--nav-bar-color);
@@ -142,15 +136,11 @@ body {
   color: var(--white);
 }
 
-/* Main general style */
-
 main {
   padding-top: 11.25rem;
   padding-left: 5rem;
   padding-right: 5rem;
 }
-
-/* Container__apresentation style */
 
 .container__apresentation {
   margin-top: 1.88rem;
@@ -210,8 +200,6 @@ main {
   animation-delay: 0.8s;
 }
 
-/* Container__about__me style */
-
 .container__about__me {
   padding-top: 10rem;
   opacity: 0;
@@ -247,7 +235,6 @@ main {
   font-weight: 400;
 }
 
-/* Container__technologies style */
 .container__technologies {
   padding-top: 10rem;
   opacity: 0;
@@ -320,8 +307,6 @@ main {
   color: var(--white);
 }
 
-/* Experience styles */
-
 .container__experience {
   padding: 6.25rem 0.9rem;
   padding-top: 10rem;
@@ -392,7 +377,6 @@ main {
   margin-bottom: 0.625rem;
 }
 
-/* Container__projects style */
 .container__projects {
   padding-top: 4rem;
   opacity: 0;
@@ -506,8 +490,6 @@ main {
   fill: var(--white);
 }
 
-/* Footer__contact styles */
-
 .footer__contact {
   padding-top: 10rem;
   opacity: 0;
@@ -581,7 +563,6 @@ main {
   margin-bottom: 5rem;
 }
 
-/* Consolidated Media Queries */
 @media (max-width: 1200px) {
   footer {
     padding: 0 2rem 0;
@@ -630,7 +611,6 @@ main {
 }
 
 @media (max-width: 900px) and (min-width: 360px) {
-  /* Nav */
   body {
     overflow: hidden;
     overflow-y: scroll;
@@ -682,7 +662,6 @@ main {
     animation: fade .3s ease-in-out;
   }
   
-  /* Apresentation */
   .container__apresentation > img {
     width: 23rem;
     animation: fadeUp 0.5s ease-out forwards;
@@ -709,14 +688,14 @@ main {
     animation: fadeUp 0.7s ease-out forwards;
     animation-delay: 0.1s;
   }
-  /* About Me */
+ 
   .container__about__me__title {
     font-size: 2rem;
   }
   .container__about__me__paragraph {
     font-size: 1.2rem;
   }
-  /* Technologies */
+  
   .container__technologies__title {
     font-size: 2rem;
   }
@@ -739,7 +718,7 @@ main {
   .container__technologies__images__tech span {
     font-size: 1rem;
   }
-  /* Experiences */
+ 
   .container__experience__title {
     font-size: 2rem;
   }
@@ -809,13 +788,12 @@ main {
 }
 
 @media (max-width: 720px) and (min-width: 360px) {
-  /* Main */
   main {
     padding-top: 8rem;
     padding-left: 1.5rem;
     padding-right: 1.5rem;
   }
-  /* Apresentation */
+  
   .container__apresentation {
     margin-top: 1rem;
   }
@@ -833,7 +811,7 @@ main {
     font-size: 1.5rem;
     margin-bottom: 1.5rem;
   }
-  /* About Me */
+  
   .container__about__me {
     padding-top: 6rem;
   }
@@ -845,7 +823,7 @@ main {
     max-width: 90%;
     line-height: 1.6;
   }
-  /* Technologies */
+  
   .container__technologies {
     padding-top: 6rem;
   }
@@ -877,7 +855,6 @@ main {
     font-size: 1rem;
   }
 
-  /* Experiences */
   .container__experience {
     padding: 4rem 1rem;
     padding-top: 6rem;
@@ -901,7 +878,7 @@ main {
     font-size: 1rem;
     line-height: 1.5rem;
   }
-  /* Projects */
+  
   .container__projects {
     padding-top: 3rem;
   }
@@ -942,7 +919,8 @@ main {
     padding: 0.8rem 1rem;
     font-size: 0.9rem;
   }
-  /* Footer */
+  
+  
   .footer__contact {
     padding-top: 6rem;
     margin-bottom: 4rem;
