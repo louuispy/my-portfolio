@@ -2,13 +2,13 @@
 
 :root {
   --primary-color: #0e001b;
-  --secondary-color: #290d36;
-  --tertiary-color: #5f1c70;
+  --secondary-color: #190635;
+  --tertiary-color: #7241bd;
   --quaternary-color: #ebd3f8;
-  --nav-bar-color: #170128;
+  --nav-bar-color: rgba(44, 18, 81);
   --white: #ffffff;
-  --gradient-1: linear-gradient(to right bottom, #f76bd9, #671fdb);
-  --gradient-2: linear-gradient(to top right, #671fdb, #f76bd9);
+  --gradient-1: linear-gradient(to right bottom, #aa8bda, #aa8bda);
+  --gradient-2: linear-gradient(to top right, #8460b9, #8460b9);
 }
 
 @keyframes fade {
@@ -82,7 +82,16 @@
 
 body {
   font-family: Outfit, sans-serif;
-  background: #20002e;
+   background: linear-gradient(
+    to bottom,       /* Gradiente vertical */
+    #513280  0%,      /* Azul no topo */
+    #371d5f 5%,
+    #150135 10%,
+    #0e001b 20%,      /* Preto começa no topo */
+    #0e001b 85%,
+    #150135 88%,
+    #513280 100%    /* Preto até quase o final */  /* Azul no footer */
+  );
 }
 
 .nav__bar {
@@ -162,7 +171,6 @@ main {
   margin-bottom: 5.625rem;
   scale: 1.05;
   z-index: 0;
-  box-shadow: 0 0 3.125rem 0.063rem #681274, 0 0 4.375rem 0.063rem #560361;
 }
 
 .container__apresentation__texts {
@@ -285,8 +293,8 @@ main {
 
 .container__technologies__images__tech:hover {
   transform: scale(1.05);
-  box-shadow: 0 0 1.25rem 0.063rem #681274;
-  background-color: #681274;
+  box-shadow: 0 0 1.25rem 0.063rem #7241bd;
+  background-color: #7241bd;
 }
 
 .container__technologies__images__tech svg {
@@ -350,8 +358,8 @@ main {
 }
 
 .container__experience__timeline li:hover {
-  box-shadow: 0 0 1.25rem 0.063rem #681274;
-  background-color: #681274;
+  box-shadow: 0 0 1.25rem 0.063rem #7241bd;
+  background-color: #7241bd
 }
 
 .container__experience__timeline li:last-child {
@@ -479,9 +487,9 @@ main {
 }
 
 .container__projects__project a:hover {
-  box-shadow: 0 0 1.25rem 0.063rem #681274;
-  background-color: #681274;
-  border: 0.06rem solid #681274;
+  box-shadow: 0 0 0.5rem 0.063rem #7241bd;
+  background-color: #7241bd;
+  border: 0.06rem solid #7241bd;
 }
 
 .container__projects__project svg {
@@ -544,8 +552,8 @@ main {
 }
 
 .footer__contact__links a:hover {
-  box-shadow: 0 0 1.25rem 0.063rem #681274;
-  background-color: #681274;
+  box-shadow: 0 0 1.25rem 0.063rem #7241bd;
+  background-color: #7241bd;
   scale: 1.1;
 }
 
@@ -763,7 +771,7 @@ main {
     height: 1.25rem;
     width: 1.25rem;
     border-radius: 50%;
-    background-color: #681274;
+    background-color: #7241bd;
     top: 0;
     z-index: 1;
   }
@@ -773,7 +781,7 @@ main {
     height: calc(100% + 2.5rem);
     width: 0.12rem;
     top: 0;
-    background-color: #681274;
+    background-color: #7241bd;
     right: -1.8rem;
   }
   .container__experience__timeline li:nth-child(even):not(:last-child)::after {
@@ -782,7 +790,7 @@ main {
     height: calc(100% + 2.5rem);
     width: 0.12rem;
     top: 0;
-    background-color: #681274;
+    background-color: #7241bd;
     left: -1.8rem;
   }
 }
