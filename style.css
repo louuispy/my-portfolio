@@ -7,8 +7,8 @@
   --quaternary-color: #ebd3f8;
   --nav-bar-color: rgba(44, 18, 81);
   --white: #ffffff;
-  --gradient-1: linear-gradient(to right bottom, #aa8bda, #aa8bda);
-  --gradient-2: linear-gradient(to top right, #8460b9, #8460b9);
+  --gradient-1: linear-gradient(to right bottom, #9854fd, #9854fd);
+  --gradient-2: linear-gradient(to top right, #9854fd, #9854fd);
 }
 
 
@@ -90,8 +90,9 @@ body {
     #150135 10%,
     #0e001b 20%,      /* Preto começa no topo */
     #0e001b 85%,
-    #150135 88%,
-    #513280 100%    /* Preto até quase o final */  /* Azul no footer */
+    #150135 93%,
+    #36126b 96%,
+    #8145da 100%/* Preto até quase o final */  /* Azul no footer */
   );
 }
 
