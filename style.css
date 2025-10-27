@@ -11,6 +11,7 @@
   --gradient-2: linear-gradient(to top right, #8460b9, #8460b9);
 }
 
+
 @keyframes fade {
   from {
     opacity: 0;
