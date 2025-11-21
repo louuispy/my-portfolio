@@ -322,7 +322,7 @@ main {
   padding-top: 10rem;
   opacity: 0;
   width: 100%;
-  max-width: 45rem;
+  max-width: 52rem;
   display: flex;
   flex-direction: column;
   margin: 0 auto;
@@ -419,18 +419,18 @@ main {
   border-radius: 1.25rem;
   background-color: var(--secondary-color);
   backdrop-filter: blur(0.625rem);
-  width: 55rem;
+  width: 52rem;
   margin-bottom: 1.25rem;
 }
 
 .container__projects__project img {
-  width: 50rem;
+  width: 47rem;
   border-radius: 0.875rem;
   margin-bottom: 1rem;
 }
 
 .container__projects__project__video {
-  width: 50rem;
+  width: 47rem;
   border-radius: 0.875rem;
   margin-bottom: 1rem;
 }
