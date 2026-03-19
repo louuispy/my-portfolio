@@ -1,3 +1,8 @@
+/* ============================================================
+   LUÍS HENRIQUE — PORTFOLIO CSS
+   Aesthetic: Neuro-Futuristic / Cyberpunk Violet
+   ============================================================ */
+
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Sora:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500&display=swap');
 
 /* ── VARIABLES ─────────────────────────────────────────────── */
@@ -1039,14 +1044,13 @@ footer::before {
     width: 240px;
     background: var(--panel);
     border: 1px solid var(--border-hi);
-    border-radius: 4px;
+    border-radius: 2px;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
     gap: 0;
     z-index: 999;
     padding: 12px;
-    clip-path: polygon(0 0, calc(100% - 16px) 0, 100% 16px, 100% 100%, 0 100%);
 
     display: flex;
     opacity: 0;
@@ -1090,23 +1094,23 @@ footer::before {
   .nav__links.open li:nth-child(4) { opacity: 1; transform: translateX(0); transition-delay: 0.16s; }
   .nav__links.open li:nth-child(5) { opacity: 1; transform: translateX(0); transition-delay: 0.20s; }
   .nav__links.open li:nth-child(6) { opacity: 1; transform: translateX(0); transition-delay: 0.24s; }
+  .nav__links.open li:nth-child(7) { opacity: 1; transform: translateX(0); transition-delay: 0.24s; }
 
   .nav__links li a {
     display: block;
     width: 100%;
-    font-size: 0.7rem;
+    font-size: 0.75rem;
     padding: 10px 14px;
     border-radius: 2px;
     color: var(--text-secondary);
     transition: background 0.2s, color 0.2s;
+    letter-spacing: 0.1em;
   }
 
   .nav__links li a:hover {
     background: rgba(123, 47, 255, 0.1);
     color: var(--text-primary);
   }
-
-  .nav__links li a { font-size: 0.9rem; padding: 12px 24px; }
 
   .container__apresentation {
     flex-direction: column;
