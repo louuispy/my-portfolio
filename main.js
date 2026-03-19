@@ -269,7 +269,7 @@
       ctx.clearRect(0, 0, VW, VH);
 
       particles.forEach(p => p.update());
-      drawConnections();
+      // drawConnections();
       drawParticles();
 
       requestAnimationFrame(animate);
