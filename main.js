@@ -196,10 +196,9 @@
         if (!el) return;
 
         const texts = [
-            "Cientista de Dados",
-            "ML Engineer",
             "Especialista em IA",
             "Desenvolvedor Python",
+            "Engenheiro de Visão Computacional",
         ];
         let textIdx = 0;
         let charIdx = 0;
