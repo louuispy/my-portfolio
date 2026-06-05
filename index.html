@@ -17,7 +17,7 @@
   </head>
   <body>
     <header>
-      <nav class="nav__bar">
+      <nav class="nav__bar glass">
         <ul class="nav__links">
           <li><a href="#home">Início</a></li>
           <li><a href="#about_me">Sobre mim</a></li>
@@ -35,19 +35,23 @@
     </header>
     <main id="home">
       <section class="container__apresentation">
-        <img
-          src="/assets/Profile Image.png"
-          alt="Imagem do Luís Henrique. Homem branco com cabelos ondulados castanhos e olhos pretos. Utiliza um óculos preto com camisa branca, em um fundo roxo."
-        />
-        <div class="container__apresentation__texts">
-          <h1 class="container__apresentation__texts__title">
-            Olá! Eu sou <strong class="title__strong">Luís Henrique</strong>
-          </h1>
-          <h2 class="container__apresentation__texts__header">
-            Cientista de Dados
-          </h2>
+        <div class="layout layout--hero">
+          <img
+            src="/assets/Profile Image.png"
+            alt="Imagem do Luís Henrique. Homem branco com cabelos ondulados castanhos e olhos pretos. Utiliza um óculos preto com camisa branca, em um fundo roxo."
+          />
+          <div class="container__apresentation__texts">
+            <h1 class="container__apresentation__texts__title">
+              Olá! Eu sou <strong class="title__strong">Luís Henrique</strong>
+            </h1>
+            <h2 class="container__apresentation__texts__header">
+              Cientista de Dados
+            </h2>
+          </div>
         </div>
       </section>
+
+      <div class="layout layout--sections">
       <section class="container__about__me" id="about_me">
         <h2 class="container__about__me__title">Sobre mim</h2>
         <p class="container__about__me__paragraph">
@@ -386,6 +390,7 @@
         </div>
       </section>
 
+      <div class="section-split">
       <section class="container__experience" id="experience">
         <h2 class="container__experience__title">Experiências</h2>
         <ul class="container__experience__timeline">
@@ -501,9 +506,11 @@
           </li>
         </ul>
       </section>
+      </div>
 
       <section class="container__projects" id="project">
         <h2 class="container__projects__title">Projetos</h2>
+        <div class="container__projects__grid">
         <div class="container__projects__project">
           <img
             class="container__projects__project__img"
@@ -607,9 +614,12 @@
             perguntas com LLM. Feito em Python, utilizando LangChain e base64.
           </p>
         </div>
+        </div>
       </section>
+      </div>
     </main>
-    <footer id="contact">
+    <footer id="contact" class="glass">
+      <div class="layout layout--footer">
       <div class="footer__contact">
         <h2 class="footer__contact__title">Fale comigo</h2>
         <p class="footer__contact__paragraph">
@@ -751,6 +761,7 @@
         </ul>
       </div>
       <p class="footer__copywright">©2025 - Luís Henrique</p>
+      </div>
     </footer>
     <script src="main.js"></script>
   </body>
