@@ -197,8 +197,7 @@
 
         const texts = [
             "Especialista em IA",
-            "Desenvolvedor Python",
-            "Engenheiro de Visão Computacional",
+            "Desenvolvedor Python"
         ];
         let textIdx = 0;
         let charIdx = 0;
