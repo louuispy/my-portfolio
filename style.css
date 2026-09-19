@@ -729,9 +729,6 @@ footer {
   .projects-grid {
     grid-template-columns: minmax(0, 1fr);
   }
-  .project-card {
-    min-height: 420px;
-  }
   .project-card img {
     height: 190px;
   }
