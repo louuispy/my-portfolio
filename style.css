@@ -687,7 +687,8 @@ footer {
     gap: 4px;
     white-space: nowrap;
   }
-  .hero__actions .btn svg {
+  .hero__actions .btn svg,
+  .hero__actions .btn .icon {
     width: 14px;
     height: 14px;
     flex-basis: 14px;
@@ -815,7 +816,10 @@ footer {
 
 .hero__actions .btn svg,
 .footer__links .btn svg,
-.project-card__link svg {
+.project-card__link svg,
+.hero__actions .btn .icon,
+.footer__links .btn .icon,
+.project-card__link .icon {
   width: 17px;
   height: 17px;
   display: block;
@@ -825,6 +829,22 @@ footer {
   stroke-width: 1.7;
   stroke-linecap: round;
   stroke-linejoin: round;
+}
+.hero__actions .btn .icon,
+.footer__links .btn .icon,
+.project-card__link .icon {
+  filter: brightness(0) saturate(100%) invert(87%) sepia(43%) saturate(722%)
+    hue-rotate(36deg) brightness(104%) contrast(91%);
+}
+.hero__actions .btn:hover .icon,
+.footer__links .btn:hover .icon,
+.project-card__link:hover .icon {
+  filter: brightness(0);
+}
+
+.hero__actions .btn[href*="Currículo"] .icon {
+  width: 15px;
+  height: 15px;
 }
 
 .skills-grid {
@@ -861,6 +881,14 @@ footer {
   border-radius: var(--card-radius);
 }
 
+.project-card__link .icon {
+  width: 16px;
+  height: 16px;
+  margin: 0;
+  align-self: center;
+  object-fit: contain;
+}
+
 .project-card__link:hover {
   color: var(--bg);
   background: var(--lime);
@@ -889,6 +917,10 @@ footer {
     color: var(--bg);
     background: var(--lime);
     border-color: var(--lime);
+  }
+
+  .footer__links .footer__email .icon {
+    filter: brightness(0);
   }
 
   .footer__links .footer__email:hover {
@@ -926,4 +958,14 @@ footer {
     background: transparent;
     border: 0;
   }
+}
+
+.footer__social[href*="github"] .icon {
+  width: 15px;
+  height: 15px;
+}
+
+.footer__social[href*="linkedin"] .icon {
+  width: 19px;
+  height: 19px;
 }
